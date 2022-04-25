@@ -43,6 +43,7 @@ class User extends Authenticatable implements MustVerifyEmail
         'two_factor_secret',
     ];
 
+
     /**
      * The attributes that should be cast.
      *
@@ -60,4 +61,15 @@ class User extends Authenticatable implements MustVerifyEmail
     protected $appends = [
         'profile_photo_url',
     ];
+
+    public $first_name;
+    public function setFirstName($firstName)
+        {
+            $this->first_name = $firstName;
+        }
+    public function getFirstName()
+        {
+        return $this->first_name;
+        }
+
 }
